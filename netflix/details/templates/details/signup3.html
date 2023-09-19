@@ -1,0 +1,29 @@
+{% extends 'details/signup1.html' %}
+{% block body %}
+
+<div class="card">
+    <div class="stepheader">
+        <span class="stepindicator">
+            STEP
+            <b>3</b>
+            OF 3
+        </span>
+    </div>
+    <div class="heading3">
+        <h1>Welcome</h1>
+        <h1>Joining Netflix Is Easy</h1>
+        <div class="msg">Enter your password and you'll be watching in no time.</div>
+    </div>
+    <div class="em_show"><span>E-mail {{ em }} </span></div>
+
+    <div class="paswrd">
+        <form action="">
+            <input type="password"><br>
+            
+            <button class="btn">
+                <a href="#">NEXT</a>
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

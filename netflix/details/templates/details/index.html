@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap");
+      @import url("https://fonts.cdnfonts.com/css/netflix-font");
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: black;
+      }
+
+      .container {
+        background-image: linear-gradient(
+            180deg,
+            rgba(8, 2, 2, 0.99),
+            rgba(255, 255, 255, 0.2),
+            rgba(10, 7, 7, 0.99)
+          ),
+          url(https://assets.nflxext.com/ffe/siteui/vlv3/b85863b0-0609-4dba-8fe8-d0370b25b9ee/fdf508c8-97d0-42fd-a6f9-9bef6bf96934/IN-en-20230731-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+        height: 96vh;
+      }
+
+      .container .nav {
+        height: 5.93rem;
+        display: flex;
+        position: relative;
+      }
+
+      .nav img {
+        width: 140px;
+        height: 40px;
+        margin: 1.75rem;
+      }
+
+      .nav select {
+        width: 150px;
+        height: 35px;
+        background-color: black;
+        color: whitesmoke;
+        border: 2px solid white;
+        border-radius: 4px;
+        text-align: center;
+        opacity: 0.8;
+        margin-top: 1.75rem;
+        margin-left: 60rem;
+      }
+
+      .signin {
+        background-color: black;
+        color: whitesmoke;
+        border-radius: 5px;
+        font-weight: bold;
+        background-color: rgb(255, 0, 0);
+        margin-top: 1.75rem;
+        margin-left: 3rem;
+        text-align: center;
+        padding: auto;
+
+        /* Border box Size */
+        width: 80px;
+        height: 35px;
+      }
+
+      .signin a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .card {
+        width: 80vw;
+        height: 50vh;
+        border-radius: 10px;
+        margin-left: 10vw;
+        margin-top: 20vh;
+        text-align: center;
+      }
+
+      .card h1 {
+        color: whitesmoke;
+        font-size: 50px;
+        padding-top: 80px;
+        font-family: "Netflix Font", sans-serif;
+      }
+      .card h4 {
+        color: whitesmoke;
+        font-size: 35px;
+        font-weight: 100;
+      }
+      .card h3 {
+        color: whitesmoke;
+        font-size: 25px;
+        font-weight: 100;
+      }
+      .card input {
+        width: 400px;
+        height: 55px;
+        background-color: black;
+        opacity: 0.9;
+        color: whitesmoke;
+        border-radius: 2px;
+        border: none;
+        font-size: 20px;
+      }
+      .card button {
+        width: 200px;
+        height: 55px;
+        background-color: rgb(255, 0, 0);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-family: "Netflix Font", sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="nav">
+        <img src="{% static 'details/images/netimg.png' %}" />
+        <select name="language" id="">
+          <option value="English">English</option>
+          <option value="हिन्दी">हिन्दी</option>
+        </select>
+        <div class="signin">
+          <a href="{% url 'signin' %}">Sign In</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h1>Unlimited movies, TV shows and more</h1>
+        <h4>Watch anywhere. Cancel anytime.</h4>
+        <br />
+        <br />
+        <h3>
+          Ready to watch? Enter your email to create or restart your membership.
+        </h3>
+        <form action="{% url 'signup1' %}" method="POST">
+          {% csrf_token %}
+          <input type="email" placeholder="  Email address" name="email" />
+          <button type="submit">Get Started</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

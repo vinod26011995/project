@@ -1,0 +1,54 @@
+.main{
+    background-image: url(../images/background.jpg);
+}
+.card{
+    width: 400px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 6em 34em;
+    background-color:black ;
+    opacity: 70%;
+}
+.card h1{
+    color: white;
+    margin: 1em 1em;
+    font-family: serif;
+}
+.card input{
+    display: flex;
+    width: 300px;
+    height: 50px;
+    margin-left: 50px;
+    border-radius: 5px;
+}
+.card button{
+    text-align: center;
+    margin: 5em 4em;
+    width: 300px;
+    height: 50px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+}
+.card h3{
+    color: azure;
+    margin: -2em 5em;
+    
+   
+}
+.card h4{
+    color: azure;
+    display: flex;
+    margin-left:  17em;
+    margin-top: 1em;
+}
+.card h5{
+    color: azure;
+    margin: 3em 2em;
+    font-size: 20px;
+}
+.card p{
+    color: azure;
+    font-size: 15px;
+    margin: -3em 3em;
+}

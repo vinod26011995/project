@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'details/css/signup_1.css'%}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="nav">
+            <img src="{% static 'details/images/netimg.png'%}" alt="" width="80px">
+            <a href="">Sign in</a>
+        </div>
+
+        <hr width="100%" size="2px" color="#e0e0eb">
+
+        {% block body %}
+        <div class="card">
+            <div class="img"><img src="https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Devices.png" alt=""
+                    width="300px"></div>
+            <div class="stepheader">
+                <br>
+                <span class="stepindicator">
+                    STEP
+                    <b>1</b>
+                    OF 3
+                </span>
+                <br>
+                <br>
+                <h1 class="stepheading">Finish Setting Up Your account</h1>
+                <br>
+            </div>
+            <div class="context">
+                Netflix is personalized for you. Create a password to watch on any device at any time.
+            </div>
+            <button class="btn">
+            <a href="{% url 'signup2'%}">NEXT</a>
+            </button>
+        
+        </div>
+
+        {% endblock %}
+
+    </div>
+
+</body>
+
+</html>
